@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>HighTechnologies</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="landing">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">HighTechnologies</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Mas Info</a>
+								<ul>
+									
+									<li><a href="#">Eventos</a></li>
+									<li>
+										<a href="#">Cursos</a>
+										<ul>
+											<li><a href="cursos.html">Unity Basico</a></li>
+											<li><a href="#">Android Basico</a></li>
+											<li><a href="#">HTML Basico</a></li>
+											<li><a href="#">Aun no disponible</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+				        <!--<li><a href="Programming.html">Programming</a></li> -->
+							<li><a href="https://chatupp-b5f1d.firebaseapp.com/" class="button special">Chat en linea</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Curso basico de Unity</h2>
+							<p>Curso "1" como crear un menu</p>
+                            <p>By Skyline</p>
+						</header>
+
+						<!-- Text -->
+							<section>
+								<h3>Hola</h3>
+								<p>Bienvenido este curso de Unity constara de 4 tutoriales que podras encontrar mas abajo de forma gratuita.</p>
+
+								<hr />
+
+								<header>
+									<h3>Requisitos</h3>
+									<p></p>
+								</header>
+								<p>Necistaras un pc, puede ser de gama baja siempre y cuando sea de generacion mas reciente </p>
+								<header>
+									<h4><u>PC</u></h4>
+									<p><b>GPU/VRAM:</b> 512</p>
+                                    <p><b>RAM:</b> 3GB</p>
+                                    <p><b>DISCO:</b> 128GB</p>
+                                    <p><b>OS:</b> Windos/Linux</p>
+								</header>
+								
+
+								<hr />
+
+								<h4>Descripcion</h4>
+								<blockquote>En el video detallamos cada uno de los paso para crear un menu desde codigo </blockquote>
+                                
+                                <!-- Video -->
+                              
+                                <div style="text-align:center;">
+
+                                    <div class="video-responsive" >
+                                      
+                                        <video id="sampleMovie"  preload controls>
+                                        <source src="prueba1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+
+
+                                           <object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" >
+                                              <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+                                              <param name="allowFullScreen" value="true" />
+                                              <param name="wmode" value="transparent" />
+                                              <param name="flashvars" value='config={"clip":{"url":"HTML5Sample_flv.flv","autoPlay":false,"autoBuffering":true}}' />
+                                           </object>
+                                
+                                        </video>
+
+                                    
+
+
+
+                                    </div>
+                                </div>
+
+                                
+                                <!-- <div style="text-align:center;">
+                                <video id="sampleMovie" width="1063" height="598" preload controls>
+                                <source src="prueba1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+
+
+                                   <object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
+                                      <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+                                      <param name="allowFullScreen" value="true" />
+                                      <param name="wmode" value="transparent" />
+                                      <param name="flashvars" value='config={"clip":{"url":"HTML5Sample_flv.flv","autoPlay":false,"autoBuffering":true}}' />
+                                   </object>
+                                </video>
+                                </div>
+                                                -->
+                        
+                        
+                                <section>
+								<ul class="actions">
+									<li><a href="#" class="button">Anterior Tutorial</a></li>
+									<li><a href="#" class="button special">Sig. Tutorial</a></li>
+                                </ul>
+                                </section>
+								
+                                
+                                <!-- Codigo -->
+                                
+                                
+                                <h4>Codigo main.cs</h4>
+								<pre><code>
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+
+public class menu : MonoBehaviour 
+{
+
+	// Use this for initialization
+	public void LoadMenu () 
+	{
+		SceneManager.LoadScene ("Level01");
+	}
+}
+	</code></pre>
+							</section>
+
+                               <hr /> 
+                                <!-- Imagen -->
+							<section>
+								<h3>Mas tutoriales</h3>
+								
+								<div class="box alt">
+									<div class="row 50% uniform">
+										<div class="12u$"><span class="image fit"><img src="images/pic07.jpg" alt="" /></span></div>
+										<div class="4u  6u(xsmall)"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+										<div class="4u  6u$(xsmall)"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+										<div class="4u$ 6u(xsmall)"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+										
+									</div>
+								</div>
+                            </section>                                
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+				<!--	<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li> -->
+						
+                        <li><a href="https://www.facebook.com/HTecn/" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						
+                <!--    <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li> -->
+                        
+				<!--	<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li> -->
+						<li><a href="https://github.com/HighTechnologies" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						
+                        <li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy;All rights reserved.</li><li>Design: <a href="https://www.facebook.com/SkylinenCore">Skyline </a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
