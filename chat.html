@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HighTechnologies</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#083756" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    
+    
+    <!-- Latest compiled and minified CSS -->
+       
+    </head>
+    <body class="landing">
+        <div id="page-wrapper">
+            
+ 
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo">HighTechnologies</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Cursos</a>
+								<ul>
+								    <li><a href="cursos.html">Unity Basico</a></li>
+								    <li><a href="#">Android Basico</a></li>
+								    <li><a href="#">HTML Basico</a></li>
+								    <li><a href="#">Aun no disponible</a></li>																			
+								</ul>
+							</li>
+                            <li>
+                                <a href="#">Acerca de</a>
+                                <ul>
+                                    <li><a href="#">Mision</a></li>
+                                    <li><a href="#">Vision</a></li>
+                                </ul>
+				            </li>
+				        <!--<li><a href="Programming.html">Programming</a></li> -->
+							<li><a href="chat.html" class="button special">Chat en linea</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>							
+							<p>
+                                                          
+                                <button id="facebook" class="button special">
+                                        Iniciar Sesion 
+                                </button>
+                            
+                                
+							</p>
+						</header>
+						<span class="image"><img src="https://i2.wp.com/www.pingudownunder.com/wp-content/uploads/2017/01/cropped-IMG_3648.png?fit=250%2C250" alt="" /></span>
+                        <header>							
+							<p>
+                                <a id="facebook" class="button special">Iniciar/Registrr</a>
+                                <br />
+							</p>
+						</header>
+                        <span class="image"><img src="https://i2.wp.com/www.pingudownunder.com/wp-content/uploads/2017/01/cropped-IMG_3648.png?fit=250%2C250" alt="" /></span>
+					</div>
+
+				</section>
+            
+                        <div id="contenedor-base">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs 12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Mensajes del chat</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-group" id="box">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-offset-1 col-xs-offset-1 col-sm-10 col-xs-10">
+                <input type="text" class="form-control" id="cuerpo" placeholder="Ingresa un mensaje" aria-describedby="enviar">
+                <span class="input-group-btn">
+                    <button class="btn" id="enviar"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </span>
+                
+            </div>
+        </div>
+        
+        
+        
+        <!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+        
+            <!-- Scripts de JQuery y Firebase -->
+   <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+</script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+     // Initialize Firebase
+	var config = {
+    apiKey: "AIzaSyCqIFapM_rHMuN1xMWknVqwCGIrWGTYP50",
+    authDomain: "chatupp-b5f1d.firebaseapp.com",
+    databaseURL: "https://chatupp-b5f1d.firebaseio.com",
+    storageBucket: "chatupp-b5f1d.appspot.com",
+    messagingSenderId: "439439983003"
+				};
+    firebase.initializeApp(config);
+
+    </script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/e433d7b799.js"></script>
+
+    <script>
+        var db = firebase.database();
+
+        $('#facebook').on('click', function(){
+            var provider = new firebase.auth.FacebookAuthProvider();
+            firebase.auth().signInWithPopup(provider).then(function(result){
+                var token = result.credential.accessToken;
+                var user = result.user
+            });
+        });
+
+        firebase.auth().onAuthStateChanged(function(user){
+            if(user){
+                $('#facebook').fadeOut();
+                $('#contenedor-base').fadeIn();
+                $('.datos_user').fadeIn();
+                db.ref('mensajes').on('child_added', function(data){
+                $('#box').append('<li class="list-group-item"><img class="img_chat" src="'+data.val().img+'">'+data.val().mensaje+' - Enviado por: '+data.val().nombre+'</li>')
+            });
+                var nombre = user.displayName;
+                var img = user.photoURL;
+                console.log(nombre);
+                $('#img_user').attr({'src':img});
+                $('#name_user').text(nombre); 
+            }
+            else{
+                $('#facebook').fadeIn();
+                $('#contenedor-base').fadeOut();
+                $('.datos_user').fadeOut();
+            }
+        });
+
+        $('#enviar').on('click', function(){
+            var mensaje = $('#cuerpo').val();
+            db.ref('mensajes').push({
+                mensaje: mensaje,
+                nombre: $('#name_user').text(),
+                img: $('#img_user').attr('src'),
+            });
+            $('#cuerpo').val('');
+        });
+
+        $('#logout').on('click', function(){
+            firebase.auth().signOut().then(function(){
+                $('#img_user').attr({'src':''});
+                $('#nombre_user').text('');
+                $('#box').text('');
+            });
+        });
+    </script>
+</body>
+</html>
+</html>
