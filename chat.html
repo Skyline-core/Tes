@@ -12,6 +12,46 @@
     
     
     <!-- Latest compiled and minified CSS -->
+        <style>
+        body { padding-bottom: 70px; }
+
+        #img_user {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            margin-right: 10px;
+        }
+
+        .img_chat{
+            width: 35px;
+            height: 35px;
+            border-radius: 18px;
+            margin-right: 10px;
+        }
+
+        .datos_user{
+            display: none;
+            text-align: right;
+        }
+
+        a, a:hover, a:active, a:focus, a:visited{
+            color: white;
+            text-decoration: none;
+        }
+
+        .centrado{
+            text-align: center;
+        }
+
+        .contenedor_base{
+            display: none;
+        }
+
+        .blanquito{
+            color: white;
+        }
+
+    </style>
        
     </head>
     <body class="landing">
@@ -42,6 +82,17 @@
 				            </li>
 				        <!--<li><a href="Programming.html">Programming</a></li> -->
 							<li><a href="chat.html" class="button special">Chat en linea</a></li>
+                            
+                            <div class="datos_user">
+                                <img src="" alt="" id="img_user">
+                                <span class="droptown blanquito">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="name_user">           </span>&nbsp;<span class="caret"></span></a>                            
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li id="logout"><a role="button" href="#">Cerrar sesión</a></li>
+                                    </ul>
+                                </span>
+                            </div>
+                            
 						</ul>
 					</nav>
 				</header>
@@ -53,22 +104,13 @@
 							<p>
                                                           
                                 <button id="facebook" class="button special">
-                                        Iniciar Sesion 
+                                        Iniciar Sesion FB 
                                 </button>
                             
                                 
 							</p>
 						</header>
 						<span class="image"><img src="https://i2.wp.com/www.pingudownunder.com/wp-content/uploads/2017/01/cropped-IMG_3648.png?fit=250%2C250" alt="" /></span>
-                        <header>							
-							<p>
-                                <a id="facebook" class="button special">Iniciar/Registrr</a>
-                                <br />
-							</p>
-						</header>
-                        <span class="image"><img src="https://i2.wp.com/www.pingudownunder.com/wp-content/uploads/2017/01/cropped-IMG_3648.png?fit=250%2C250" alt="" /></span>
-					</div>
-
 				</section>
             
                         <div id="contenedor-base">
